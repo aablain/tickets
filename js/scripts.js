@@ -27,13 +27,13 @@ $(document).ready(function() {
 
     var newTicket = new Ticket (movieChoice, showTimeInput, ageOfAttendeeInput, vetInput);
 
-    $("#results").append("<h2>" + newTicket.cost() + "</h2>");
+    $("#results").append("<h2>" + "Total:" + " " + "$" + newTicket.cost() + "</h2>");
 
-    // $("input:radio[name=movie]:checked").val("");
-    // $("#showTime").val("");
-    // $("#ageOfAttendee").val("");
-    // $("#vet").val("")
+  });
 
-
+  $(".img-responsive").click(function(event){
+    event.preventDefault();
+    $(".img-responsive").removeClass('selected');
+    $(this).addClass('selected');
   });
 });
